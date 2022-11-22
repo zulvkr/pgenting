@@ -34,7 +34,7 @@ body {
   text-rendering: optimizelegibility;
   overflow-x: hidden;
   line-height: 1.4;
-  padding-top: 12px;
+  padding: 12px 0;
 }
 
 main {
