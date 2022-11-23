@@ -14,8 +14,12 @@ export async function onRequestPost({ request, env }) {
       fo[key] = value;
     });
 
+    let phone = fo.wa
+    if (fo.wa[0] === '0') {
+      phone = fo.wa.replace('0', '62')
+    }
     const data = {
-      phone: fo.wa.replace('0', '62'),
+      phone,
       messageType: "text",
       body: `Dari: ${fo.name}\nKontak: ${fo.contact}\n\nPesan:\n${fo.message}\n\nvia pesangenting.com - HATI-HATI terhadap penipuan yang dapat dikirim melalui platform ini\n`,
     }
